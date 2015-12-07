@@ -473,6 +473,7 @@ static NSInteger const kCloseAlert = 1;
 
 - (void)onAttachment:(UIButton*)button
 {
+    [self.view endEditing:YES];
     UIActionSheet *sheet = [[UIActionSheet alloc] init];
     sheet.delegate = self;
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
